@@ -1,0 +1,37 @@
+
+※　count　100
+
+メインとは
+　countMaxは　変数
+　countは　変数
+　合否は　変数
+　startTimeは　変数
+　stopTimeは　変数
+　spanTimeは　変数
+　起動引数個数が　ゼロ？
+　ならば
+　　countMaxに　0を　入れ
+　つぎに
+　起動引数（1）を　数値変換し　countMaxと　合否に　入れ
+　合否が　偽？
+　ならば
+　　countMaxに　0を　入れ
+　つぎに
+　日時を値で得る　startTimeに　入れる
+　countに　0を　入れ
+　ここから
+　　countが　countMax　以上
+　　ならば
+　　　打ち切り
+　　つぎに
+　　「Hello　World!」を　一行表示する
+　　countを　一つ増加し
+　繰り返し
+　日時を値で得る　stopTimeに　入れる
+　stopTimeから　startTimeを　引き　1000を　掛け　spanTimeに　入れる
+　「処理回数:　」と　countを　文字列変換し　合成し　「回」を　合成し　一行表示し
+　「処理時間:　」と　spanTimeを　文字列変換し　合成し　「ミリ秒」を　合成し　一行表示すること
+。
+
+
+

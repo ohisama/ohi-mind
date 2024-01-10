@@ -1,0 +1,75 @@
+※>　C:\pmind\usemind
+
+※>　mind　go　file
+
+intは　変数と　等価。
+ifは　無処理。
+thenは　ならばと　等価。
+endifは　つぎと　等価。
+doは　ここと　等価。
+loopは　繰り返すと　等価。
+returnは　無処理。
+Printfは　一行表示と　等価。
+breakは　打ち切りと　等価。
+clockは　クロックと　等価。
+false?は　偽？と　等価。
+strconv.Atoiは　数値変換と　等価。
+strconvは　文字列変換と　等価。
+Args.sizeは　起動引数個数と　等価。
+zero?は　ゼロ？と　等価。
+Argsは　起動引数と　等価。
+setは　入れと　等価。
+appendは　合成と　等価。
+functionは　関数と　等価。
+intinは　整数入力と　等価。
+intoutは　整数出力と　等価。
+incrementは　一つ増加と　等価。
+countupは　仮定義。
+mainは　仮定義。
+funcは　本定義と　等価。
+メインは　mainする。
+
+mainは　func
+　countMaxは　int
+　countは　int
+　errorは　int
+　startTimeは　int
+　stopTimeは　int
+　spanTimeは　int
+　if　Args.size　zero?
+　then
+　　[countMax　:=　0]
+　endif
+　Args(1)　strconv.Atoi　countMaxと　errorに　set
+　if　error　false?
+　then
+　　[countMax　:=　0]
+　endif
+　[startTime　:=　clock]
+　startTimeを　数値表示し
+　[count　:=　0]
+　do
+　　if　[count　>=　countMax]
+　　then
+　　　break
+　　endif
+　　count　countup　countに　set
+　loop
+　[stopTime　:=　clock]
+　stopTimeを　数値表示し
+
+
+　[spanTime　:=　stopTime　-　startTime]
+　"処理回数:"　count　strconv　append　"回"　append　Printf
+　"処理時間:"　spanTime　strconv　append　"ミリ秒"　append　Printf。
+
+
+countupは　func　
+　cは　int
+　cに　set
+　cを　increment
+　c　return
+
+
+
+

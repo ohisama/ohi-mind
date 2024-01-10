@@ -1,0 +1,43 @@
+
+出力ファイルは　ファイル。
+
+メインとは
+　「wget.vbs」で　出力ファイルを　新規オープンし
+　「Function Wget(url)」で　出力ファイルに　一行書き込み
+　「Set WshShell = CreateObject("WScript.Shell")」で　出力ファイルに　一行書き込み
+　「FileName = Mid(url, InStrRev(url, "/") + 1)」で　出力ファイルに　一行書き込み
+　「SamAgent = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)"」で　出力ファイルに　一行書き込み
+　「hts = ""」で　出力ファイルに　一行書き込み
+　「Set objHTTP = CreateObject("Microsoft.XMLHTTP")」で　出力ファイルに　一行書き込み
+　「objHTTP.Open "GET", url, False」で　出力ファイルに　一行書き込み
+　「objHTTP.SetRequestHeader "User-Agent", SamAgent」で　出力ファイルに　一行書き込み
+　「objHTTP.Send」で　出力ファイルに　一行書き込み
+　「Set objStream = CreateObject("ADODB.Stream")」で　出力ファイルに　一行書き込み
+　「objStream.Type = 1」で　出力ファイルに　一行書き込み
+　「objStream.Open」で　出力ファイルに　一行書き込み
+　「objStream.Write objHTTP.responseBody」で　出力ファイルに　一行書き込み
+　「objStream.Position = 0」で　出力ファイルに　一行書き込み
+　「objStream.Type = 2」で　出力ファイルに　一行書き込み
+　「objStream.Charset = "Shift_JIS"」で　出力ファイルに　一行書き込み
+　「http_source = objStream.ReadText」で　出力ファイルに　一行書き込み
+　「objStream.Close」で　出力ファイルに　一行書き込み
+　「hts = http_source」で　出力ファイルに　一行書き込み
+　「Set fs = CreateObject("Scripting.FileSystemObject")」で　出力ファイルに　一行書き込み
+　「FileName = fs.BuildPath(WshShell.SpecialFolders("Desktop"), FileName)」で　出力ファイルに　一行書き込み
+　「MsgBox FileName」で　出力ファイルに　一行書き込み
+　「Set file = fs.CreateTextFile(FileName, True)」で　出力ファイルに　一行書き込み
+　「file.Write(hts)」で　出力ファイルに　一行書き込み
+　「file.Close」で　出力ファイルに　一行書き込み
+　「MsgBox "ok"」で　出力ファイルに　一行書き込み
+　「Set file = Nothing」で　出力ファイルに　一行書き込み
+　「Set fs = Nothing」で　出力ファイルに　一行書き込み
+　「Set objHTTP = Nothing」で　出力ファイルに　一行書き込み
+　「Set objStream = Nothing」で　出力ファイルに　一行書き込み
+　「End Function」で　出力ファイルに　一行書き込み
+　「Wget("https://resolvenet.org/modules/contrib/webform/tests/files/sample.json")」で　出力ファイルに　一行書き込み
+　出力ファイルを　クローズし
+　「cscript wget.vbs」を　プログラム実行
+
+
+
+
